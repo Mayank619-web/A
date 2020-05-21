@@ -1,0 +1,89 @@
+//PROBLEM STATEMENT:
+Write a Python Program(with class concepts) to find the area of the triangle using the below
+formula.
+area = (s*(s-a)*(s-b)*(s-c)) ** 0.5
+Function to take the length of the sides of triangle from user should be defined in the parent
+class and function to calculate the area should be defined in subclass.
+
+#SOURCE CODE-
+
+a = 5
+b = 6
+c = 7
+a = float(input('Enter first side: '))
+b = float(input('Enter second side: '))
+c = float(input('Enter third side:'))
+s = (a+b+c)/2
+area = (s*(s-a)*(s-b)*(s-c)) ** 0.5
+print('The area of the triangle is %0.2f' %area)
+
+#OUTPUT=Enter first side: 5
+       Enter second side: 6
+       Enter third side:7
+       The area of the triangle is 14.70
+
+
+//PROBLEM STATEMENT:
+Write a function filter_long_words() that takes a list of words and an integer n and returns the list
+of words that are longer than n.
+
+//SOURCE CODE:
+
+def filter_long_words(inputList,inputInteger):
+ 
+    listOfWords = []
+ 
+    for i in range(len(inputList)):
+        if len(inputList[i]) > inputInteger:
+            listOfWords.append(inputList[i])
+ 
+    return listOfWords
+ 
+inputListOfWords = ['wordOne','wordTwo','wordThree','wordFour','wordFive']
+inputWordLength = 7
+ print (str(filter_long_words(inputListOfWords,inputWordLength)))
+ 
+ #OUTPUT = ['wordThree', 'wordFour', 'wordFive']
+ 
+ 
+//PROBLEM STATEMENT:
+ Write a Python program using function concept that maps list of words into a list of integers
+representing the lengths of the corresponding words
+
+//SOURCE CODE:
+
+listOfWords = ['wordOne','wordTwo','wordThree','wordFour','wordFive']
+ 
+listOfInts = []
+ 
+for i in range(len(listOfWords)):
+    listOfInts.append(len(listOfWords[i]))
+ print ("List of words:"+str(listOfWords))    
+print ("List of wordlength:"+str(listOfInts))
+
+#OUTPUT = List of words:['wordOne', 'wordTwo', 'wordThree', 'wordFour', 'wordFive']
+         List of wordlength:[7, 7, 9, 8, 8]
+         
+         
+//PROBLEM STATEMENT:
+Write a Python function which takes a character (i.e. a string of length 1) and returns True if it is
+a vowel, False otherwise.
+
+
+//SOURCE CODE:
+def check_vowel(char):
+    check="aeiou" #already characters will be in lower case so no need of "AEIOU"
+    if char in check:
+        print(char ,"is vowel")
+    else:
+        print(char ,"is not a vowel")
+
+char=input("enter a character")
+check_vowel(char.lower()) #lower() converts character to lower case and passes it to function
+ 
+ 
+ #OUTPUT = enter a character K
+          k is not a vowel
+
+
+
